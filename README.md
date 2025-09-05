@@ -61,7 +61,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Your Name**
 - GitHub: [DhairyaKumar19](https://github.com/DhairyaKumar19)
-- Email: your.email@example.com
+- Email: dhairyakumar08@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -71,15 +71,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-⭐ **Star this repo if you found it helpful!** ⭐
 
-## 📈 Project Stats
-
-![GitHub stars](https://img.shields.io/github/stars/your-username/todo-list-project?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/todo-list-project?style=social)
-![GitHub issues](https://img.shields.io/github/issues/your-username/todo-list-project)
-![GitHub license](https://img.shields.io/github/license/your-username/todo-list-project)
-
----
 
 *Happy organizing! 📋✨*
