@@ -1,10 +1,8 @@
-// Task management system
+
 let tasks = [];
 let taskIdCounter = 0;
 
-/**
- * Add a new task to the list
- */
+
 function addTask() {
     const input = document.getElementById('taskInput');
     const taskText = input.value.trim();
@@ -29,10 +27,7 @@ function addTask() {
     updateStats();
 }
 
-/**
- * Toggle task completion status
- * @param {number} id - Task ID
- */
+
 function toggleTask(id) {
     const task = tasks.find(t => t.id === id);
     if (task) {
@@ -42,19 +37,13 @@ function toggleTask(id) {
     }
 }
 
-/**
- * Delete a task from the list
- * @param {number} id - Task ID
- */
+
 function deleteTask(id) {
     tasks = tasks.filter(t => t.id !== id);
     renderTasks();
     updateStats();
 }
 
-/**
- * Render all tasks to the DOM
- */
 function renderTasks() {
     const container = document.getElementById('tasksContainer');
     const emptyState = document.getElementById('emptyState');
@@ -78,9 +67,6 @@ function renderTasks() {
     `).join('');
 }
 
-/**
- * Update task statistics
- */
 function updateStats() {
     const completedTasks = tasks.filter(t => t.completed).length;
     const totalTasks = tasks.length;
@@ -89,38 +75,32 @@ function updateStats() {
     statsElement.textContent = `${totalTasks} task${totalTasks !== 1 ? 's' : ''} • ${completedTasks} completed`;
 }
 
-/**
- * Escape HTML to prevent XSS attacks
- * @param {string} text - Text to escape
- * @returns {string} Escaped HTML
- */
+
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
 }
 
-/**
- * Initialize the application
- */
+
 function init() {
     const taskInput = document.getElementById('taskInput');
     
-    // Check if input exists before adding event listener
+
     if (taskInput) {
-        // Allow adding tasks with Enter key
+
         taskInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 addTask();
             }
         });
         
-        // Focus input on load
+
         taskInput.focus();
     } else {
         console.warn('Task input element not found during initialization');
     }
 }
 
-// Initialize when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', init);
